@@ -1,6 +1,6 @@
 import express from 'express';
 import path from 'node:path';
-import messages from './messages.js';
+import db from './db/queries.js';
 import newRouter from './routers/newRouter.js';
 
 const app = express();
@@ -10,7 +10,8 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/new', newRouter);
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+  const messages = await db.getAllMessages();
   res.render('index', { messages: messages });
 });
 

@@ -10,7 +10,7 @@
     <a href="/new">Add a new message</a>
     <div>
       <% messages.map((message) => {%>
-      <h2><%= message.user %></h2>
+      <h2><%= message.username %></h2>
       <p><%= message.text %></p>
       <h6>Posted on: <%= message.added %></h6>
       <% }) %>

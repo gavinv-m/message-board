@@ -3,12 +3,12 @@ import formatCurrentDate from './date.js';
 export default [
   {
     text: 'Hi there!',
-    user: 'Amando',
+    username: 'Amando',
     added: formatCurrentDate(),
   },
   {
     text: 'Hello World!',
-    user: 'Charles',
+    username: 'Charles',
     added: formatCurrentDate(),
   },
 ];
